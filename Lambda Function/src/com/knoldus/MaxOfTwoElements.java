@@ -9,10 +9,13 @@ public class MaxOfTwoElements {
         System.out.println("Input any 2 nos: ");
         int input1 = scanner.nextInt();
         int input2 = scanner.nextInt();
-        Integer maximum = Stream.of(input1, input2)
+        System.out.println("Max number: " + getMaxOfTwoElements(input1,input2));
+    }
+
+    static Integer getMaxOfTwoElements(Integer i1, Integer i2) {
+        Integer maximum = Stream.of(i1, i2)
                 .max(Integer::compareTo)
                 .get();
-
-        System.out.println("Max number: " + maximum);
+        return maximum;
     }
 }
